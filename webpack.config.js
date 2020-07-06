@@ -12,10 +12,14 @@ module.exports = {
    },
    module: {
       rules: [
-        { 
-          test: /\.tsx?$/, 
-          loader: 'awesome-typescript-loader'
-        }
+         { 
+            test: /\.tsx?$/, 
+            loader: 'awesome-typescript-loader'
+         },
+         {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+         },
       ]
    },
    plugins : [
